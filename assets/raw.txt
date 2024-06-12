@@ -1,0 +1,128 @@
+// thenewnostyle is the boy and don't even know what he is doing now with his life
+        <Text style={styles.title2}>Pickup From Me</Text>
+        <Text style={styles.title3}>Deliver To Me</Text>
+
+
+// function MyStack() {
+//   const navigation = useNavigation();
+//   return (
+//     <Stack.Navigator
+//       screenOptions={{
+//         headerTitleAlign: 'Left',
+//         headerLeft: () => (
+//           <Icons
+//             style={{ marginLeft: 10, marginRight: 10 }}
+//             name='menu'
+//             onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
+//             size={30}
+//             color='black'
+//           />
+//         ),
+//       }}
+//     >
+//       <Stack.Screen name="HomeMain" component={HomeMain} />
+//       <Stack.Screen name="Notifications" component={RequestHistory} />
+//       <Stack.Screen name="Profile" component={Profiles} />
+//       <Stack.Screen name="Settings" component={Settings} />
+//     </Stack.Navigator>
+//   );
+// }
+
+home screen styles
+
+      <View>
+        <Text style={styles.title}>Thenewnostyle and things</Text>
+        <Text style={styles.subtitle}>$12.34 &#8226; 10-30 minutes</Text>
+      </View>
+      <View style={styles.rating}><Text>4.5</Text></View>
+
+    image: {
+      width: '100%',
+      height: 200,
+      margin: 10,
+    },
+  
+    title: {
+      fontSize: 16,
+      fontWeight: "500",
+      marginVertical: 5,
+    },
+    subtitle:{
+      color: "grey"
+    },
+    row: {
+      flexDirection: 'row',
+      alignItems: 'center'
+    },
+    rating: {
+      marginLeft: 'auto',
+      backgroundColor: 'lightgray',
+      padding: 5,
+      width: 30,
+      height: 30,
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 20,
+    }
+
+
+
+// const Drawer = createDrawerNavigator();
+
+
+// const RootsNavigator = () => {
+//   return (
+//       <Drawer.Navigator
+//         initialRouteName="Home"
+//         drawerContent={props => <UserInfo {...props} />}
+//         screenOptions={{
+//           headerShown: false,
+//           drawerActiveBackgroundColor: 'lightblue',
+//           drawerActiveTintColor: 'black',
+//           drawerInactiveTintColor: '#333',
+//           drawerLabelStyle: {
+//             marginLeft: -25,
+//             fontSize: 15,
+//           },
+//         }}
+//       >
+//         <Drawer.Screen
+//           name="Home"
+//           component={MyStack}
+//           options={{ 
+//             drawerLabel: 'HomeMain',
+//             drawerIcon: ({color}) => (
+//               <Ionicons name="business-outline" size={22} color={color} />
+//             ),
+//            }}
+//         />
+//         <Drawer.Screen
+//           name="RequestHistory"
+//           component={RequestHistory}
+//           options={{ drawerLabel: 'Request History',
+//           drawerIcon: ({color}) => (
+//             <Ionicons name="list-circle-outline" size={22} color={color} />
+//           ),
+//            }}
+//         />
+//         <Drawer.Screen
+//           name="Profiles"
+//           component={Profiles}
+//           options={{ drawerLabel: 'Profiles',
+//           drawerIcon: ({color}) => (
+//             <Ionicons name="person-outline" size={22} color={color} />
+//           ),
+//            }}
+//         />
+//         <Drawer.Screen
+//           name="Settings"
+//           component={Settings}
+//           options={{ drawerLabel: 'Settings',
+//           drawerIcon: ({color}) => (
+//             <Ionicons name="settings-outline" size={22} color={color} />
+//           ),
+//            }}
+//         />
+//       </Drawer.Navigator>
+//   );
+// }
