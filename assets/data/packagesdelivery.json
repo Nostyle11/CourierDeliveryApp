@@ -1,0 +1,93 @@
+[
+    {
+      "id": "1",
+      "userID": "9b09b087-cf40-41f4-a375-8dc75843a8d1",
+      "status": "NEW",
+      "createdAt": "2022-04-16T18:56:21.890Z",
+      "updatedAt": "2022-04-16T18:56:21.890Z",
+      "orderRestaurantId": "7d7965f7-1b33-4b8c-9bac-0c22bc905030",
+      "Restaurant": {
+        "id": "7d7965f7-1b33-4b8c-9bac-0c22bc905030",
+        "name": "Standard packages",
+        "image": "https://images.freeimages.com/images/large-previews/84b/package-1426094.jpg?fmt=webp&h=350",
+        "deliveryFee": 0.039448871531492236,
+        "minDeliveryTime": 10,
+        "maxDeliveryTime": 44,
+        "rating": 1.5095123177204128,
+        "address": "MCFR+JWH, Kumasi, Ghana",
+        "lat": 6.6743, 
+        "lng":-1.5577,
+        "createdAt": "2022-04-16T12:03:33.225Z",
+        "updatedAt": "2022-04-16T12:05:12.826Z"
+      },
+      "User": {
+        "id": "1",
+        "name": "STC",
+        "address": "Kejetia, Kumasi, Ghana",
+        "lat": 6.6867, 
+        "lng": -1.5744
+      } 
+    },
+    {
+      "id": "2",
+      "userID": "9b09b087-cf40-41f4-a375-8dc75843a8d1",
+      "status": "NEW",
+      "createdAt": "2022-04-16T18:53:32.261Z",
+      "updatedAt": "2022-04-16T18:53:32.261Z",
+      "orderRestaurantId": "7d7965f7-1b33-4b8c-9bac-0c22bc905030",
+      "Restaurant": {
+        "id": "7d7965f7-1b33-4b8c-9bac-0c22bc905030",
+        "name": "Standard packages",
+        "image": "https://images.freeimages.com/images/large-previews/4aa/moving-box-1494493.jpg?fmt=webp&h=350",
+        "deliveryFee": 0.039448871531492236,
+        "minDeliveryTime": 10,
+        "maxDeliveryTime": 44,
+        "rating": 1.5095123177204128,
+        "address": "MCFR+JWH, Kumasi, Ghana",
+        "lat": 6.6698, 
+        "lng": -1.5551,
+        "createdAt": "2022-04-16T12:03:33.225Z",
+        "updatedAt": "2022-04-16T12:05:12.826Z"
+      },
+      "User": {
+        "id": "2",
+        "name": "VIP",
+        "address": "Kejetia, Kumasi, Ghana",
+        "lat": 6.6743, 
+        "lng": -1.5577
+      }
+    },
+    {
+      "id": "3",
+      "userID": "9b09b087-cf40-41f4-a375-8dc75843a8d1",
+      "status": "NEW",
+      "createdAt": "2022-04-16T18:56:49.713Z",
+      "updatedAt": "2022-04-16T18:56:49.713Z",
+      "orderRestaurantId": "7d7965f7-1b33-4b8c-9bac-0c22bc905030",
+      "_version": 1,
+      "_lastChangedAt": 1650135409734,
+      "_deleted": null,
+      "Restaurant": {
+        "id": "7d7965f7-1b33-4b8c-9bac-0c22bc905030",
+        "name": "Heavy Packages",
+        "image": "https://images.freeimages.com/images/large-previews/1a5/boxes-1185639.jpg?fmt=webp&h=350",
+        "deliveryFee": 0.039448871531492236,
+        "minDeliveryTime": 10,
+        "maxDeliveryTime": 44,
+        "rating": 1.5095123177204128,
+        "address": "MCFR+JWH, Kumasi, Ghana",
+        "lat": 6.6615, 
+        "lng": -1.5632,
+        "createdAt": "2022-04-16T12:03:33.225Z",
+        "updatedAt": "2022-04-16T12:05:12.826Z"
+      },
+      "User": {
+        "id": "3",
+        "name": "VIP Transport",
+        "address": "Kejetia, Kumasi, Ghana",
+        "lat": 6.6743,
+        "lng": -1.5577
+      }
+    }
+  ]
+  

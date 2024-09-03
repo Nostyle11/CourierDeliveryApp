@@ -1,18 +1,27 @@
 import 'react-native-gesture-handler'
-import * as React from 'react';
-import { View, Text } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
-import RootsNavigator from './src/navigation';
-import RootNavigator from './src/navigation';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { createStackNavigator } from '@react-navigation/stack';
 
+import AppAuth from './src/components/Authnetication/Auth';
+import HomeNavigator from './src/navigation';
+import DriverRootNav from './DriverAppTesting/navigation';
 
-export default function App() {
+const Stack = createStackNavigator();
+
+export default function App(){
   return (
-
+  <GestureHandlerRootView>
     <NavigationContainer>
-      <RootNavigator />
-    </NavigationContainer>
-    
+      
+      <AppAuth/>
+      {/* <HomeNavigator /> */}
+      {/* <DriverRootNav/> */}
+      
 
+      <StatusBar style="auto" />
+    </NavigationContainer> 
+    </GestureHandlerRootView>
   );
 }

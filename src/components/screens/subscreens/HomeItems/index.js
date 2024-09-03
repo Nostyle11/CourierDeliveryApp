@@ -1,8 +1,24 @@
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { fo} from 'expo-font'
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../../../../config/firebase'; // Adjust the import path according to your project structure
 
 const HomeImage = () => {
+  const [userEmail, setUserEmail] = useState('');
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUserEmail(user.email);
+      } else {
+        setUserEmail('');
+      }
+    });
+
+    return unsubscribe; // Cleanup subscription on unmount
+  }, []);
+
   return (
     <View style={styles.Container}>
       <View style={styles.imageContainer}>
@@ -17,34 +33,42 @@ const HomeImage = () => {
         <Text style={styles.title2}>Just request and feel free</Text>
         <Text style={styles.title3}>nostyle will deliver</Text>
       </View>
+      <View style={styles.welcomeContainer}>
+        {userEmail ? (
+          <>
+            <Text style={styles.welcomeText}>Welcome Back</Text>
+            <Text style={styles.emailText}>{userEmail}</Text>
+          </>
+        ) : (
+          <Text style={styles.welcomeText}>Welcome</Text>
+        )}
+      </View>
     </View>
   );
-}
+};
 
 export default HomeImage;
 
 const styles = StyleSheet.create({
   Container: {
-    backgroundColor: '#f8f8f8',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     padding: 10,
-    marginTop: 25,
+    marginTop: 50,
     paddingHorizontal: 20,
   },
   imageContainer: {
     position: 'relative',
     width: '100%',
-    height: 180,
-    margin: 10,
+    height: 200,
   },
   image: {
     width: '100%',
     height: '100%',
-    borderRadius: 10,
+    borderRadius: 30,
   },
   gradient: {
     ...StyleSheet.absoluteFillObject,
-    borderRadius: 10,
+    borderRadius: 30,
   },
   title: {
     position: 'absolute',
@@ -69,5 +93,18 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 15,
     fontWeight: '600',
+  },
+  welcomeContainer: {
+    margin: 20,
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start'
+  },
+  welcomeText: {
+    fontSize: 16,
+  },
+  emailText: {
+    fontSize: 20,
+    color: 'gray',
+    fontWeight: 'bold',
   },
 });

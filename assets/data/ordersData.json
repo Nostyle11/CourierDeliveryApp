@@ -1,0 +1,27 @@
+[
+    {
+      "orderNumber": "#00000001",
+      "status": "Processing",
+      "from": "Ashanti Ayeduase",
+      "to": "Greater Accra Kasoa"
+    },
+    {
+      "orderNumber": "#00000002",
+      "status": "Active",
+      "from": "Ashanti Ayeduase",
+      "to": "Greater Accra Kasoa",
+      "name": "James Owusu",
+      "vehicle": "Toyota Corolla",
+      "profilePic": "../images/full.jpg"
+    },
+    {
+      "orderNumber": "#00000003",
+      "status": "Delivered",
+      "from": "Ashanti Ayeduase",
+      "to": "Greater Accra Kasoa",
+      "name": "James Owusu",
+      "vehicle": "Toyota Corolla",
+      "profilePic": "https://via.placeholder.com/50"
+    }
+  ]
+  

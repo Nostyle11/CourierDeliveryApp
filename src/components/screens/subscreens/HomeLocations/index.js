@@ -1,70 +1,76 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { Feather, Entypo } from '@expo/vector-icons';
+import React from 'react';
+import { View, Text, StyleSheet, Pressable, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const HomeLocation = () => {
+  const navigation = useNavigation();
+
+  const onPress = (packageType) => {
+    navigation.navigate('OrderLocation', { packageType });
+  };
+
   return (
-    <View style={styles.Container}>
-        <Text style={styles.titlemain}>Make Your Request</Text>
+    <View style={styles.container}>
+      <Text style={styles.titlemain}>Delivery Request</Text>
 
-        <View style={styles.row}>
-            <View><Entypo name='location-pin' size={24} style={styles.loclogo}/></View>
-            <View><Text style={styles.title}> Pickup From Me</Text></View>
-            <View style={styles.arrow}><Feather name='arrow-right' size={23}/></View>
+      <Pressable onPress={() => onPress('Standard Packages')} style={styles.row}>
+        <View style={styles.imageContainer}>
+          <Image style={styles.image} source={require('../../../../../assets/images/download.png')} />
         </View>
+        <View>
+          <Text style={styles.title}>Standard Packages</Text>
+          <Text style={styles.subtitle}>For lightweight items and packages</Text>
+        </View>
+      </Pressable>
 
-        <View style={styles.row}>
-            <View><Entypo name='location-pin' size={24} style={styles.loclogo}/></View>
-            <View><Text style={styles.title}> Deliver To Me</Text></View>
-            <View style={styles.arrow}><Feather name='arrow-right' size={23}/></View>
+      <Pressable onPress={() => onPress('Heavy Packages')} style={styles.row}>
+        <View style={styles.imageContainer}>
+          <Image style={styles.image} source={require('../../../../../assets/images/images.png')} />
         </View>
+        <View>
+          <Text style={styles.title}>Heavy Packages</Text>
+          <Text style={styles.subtitle}>For heavyweight items and packages</Text>
+        </View>
+      </Pressable>
     </View>
   );
-}
-
-export default HomeLocation;
+};
 
 const styles = StyleSheet.create({
-  Container: {
+  container: {
     padding: 10,
-    marginVertical: 40,
-
   },
   titlemain: {
-
     fontSize: 20,
     fontWeight: 'bold',
     marginVertical: 20,
     marginLeft: 10,
   },
   title: {
-
-    fontSize: 16,
-    fontWeight: "500",
-    marginVertical: 20,
-    marginLeft: 10,
+    fontSize: 20,
+    fontWeight: '600',
   },
-  subtitle:{
-    color: "grey"
+  subtitle: {
+    fontSize: 13,
+    color: 'grey',
+    fontWeight: '500',
   },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: 'lightgray',
+    borderWidth: 1,
+    borderColor: 'lightgray',
     margin: 10,
+    padding: 10,
   },
-  arrow: {
-    marginLeft: 'auto',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 20
+  imageContainer: {
+    width: 110,
+    height: 110,
   },
-  loclogo: {
-    marginLeft: 15,
-    backgroundColor: 'lightgray',
-    width: 35,
-    height: 35,
-    borderRadius: 20,
-    padding: 6,
+  image: {
+    width: 'auto',
+    height: 105,
   },
-})
+});
+
+export default HomeLocation;
